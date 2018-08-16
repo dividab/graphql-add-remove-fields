@@ -22,7 +22,7 @@ npm install graphql-add-remove-fields --save
 
 ## How to use
 
-The package exports two functions, `addFields` and `removeFields`. They accept a GraphQL AST and an array of field names to add/remove and returns a new GraphQL AST. The original AST used as input is not modified.
+The package exports two functions, `addFields` and `removeFields`. They accept a GraphQL AST and an array of field names to add/remove and returns a new GraphQL AST. The original AST used as input is not modified. Adding fields that already exists will be silently ignored. Removing fields that does not exist will be silently ignored.
 
 Here is a small example:
 
