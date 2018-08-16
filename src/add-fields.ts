@@ -12,7 +12,7 @@ export function addFields(
         node: GraphQL.SelectionSetNode,
         _key: string,
         _parent: GraphQL.ASTNode,
-        _path: string
+        _path: ReadonlyArray<string | number>
       ): {} | undefined {
         // @return
         //   undefined: no action
@@ -43,7 +43,7 @@ export function addFields(
         return false;
       }
     }
-  } as any);
+  });
 }
 
 function hasField(
