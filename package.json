@@ -2,7 +2,8 @@
   "name": "graphql-add-remove-fields",
   "version": "0.1.0",
   "description": "Add or remove fields in graphql queries",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index",
   "author": "Divid AB <info@divid.se>",
   "license": "MIT",
   "repository": "https://github.com/dividab/graphql-add-remove-fields",
@@ -13,10 +14,12 @@
     "graphql": "^0.13.2"
   },
   "devDependencies": {
+    "@types/graphql": "^0.13.4",
     "graphql-tag": "^2.9.2",
     "husky": "^0.14.3",
     "lint-staged": "^7.2.2",
     "prettier": "^1.14.2",
+    "rimraf": "^2.6.2",
     "tap-spec": "^5.0.0",
     "tape": "^4.9.1",
     "ts-node": "^7.0.1",
@@ -25,7 +28,12 @@
   },
   "scripts": {
     "lint": "tslint --config ./tslint.json -- './{src,test}/**/*.ts{,x}'",
-    "test": "tape --require ts-node/register \"test/**/*.ts\" | tap-spec"
+    "test": "tape --require ts-node/register \"test/**/*.ts\" | tap-spec",
+    "build": "rimraf lib && tsc -p src",
+    "verify": "yarn lint && yarn build && yarn coverage",
+    "publish-npm": "yarn verify && yarn publish && git push --tags",
+    "precommit": "lint-staged",
+    "coverage": "rimraf coverage .nyc_output && nyc yarn test"
   },
   "lint-staged": {
     "*.{ts,tsx}": "tslint",

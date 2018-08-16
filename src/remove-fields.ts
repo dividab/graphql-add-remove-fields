@@ -7,7 +7,7 @@ export function removeFields(
   return visit(query, {
     // tslint:disable-next-line:function-name
     Field: {
-      enter(node) {
+      enter(node: any) {
         return fieldstoRemove.indexOf(node.name.value) > -1 ? null : undefined;
       }
     }
