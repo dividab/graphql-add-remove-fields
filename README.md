@@ -22,10 +22,30 @@ npm install graphql-add-remove-fields --save
 
 ## How to use
 
+The package exports two functions, `addFields` and `removeFields`. They accept a GraphQL AST and an array of field names to add/remove and returns a new GraphQL AST. The original AST used as input is not modified.
+
 Here is a small example:
 
 ```js
-// TODO!
+import gql from "graphql-tag";
+import { addFields, removeFields } from "graphql-add-remove-fields";
+
+const query = gql`
+  query olle {
+    root {
+      name
+      nisse
+    }
+  }
+`;
+// This will add the __typename and id fields to all selection sets in the query
+const queryWithAddedFields = addFields(query, ["__typename", "id"]);
+
+// This will remove the added fields so we will get back the original query
+const queryWithRemovedFields = removeFields(queryWithAddedFields, [
+  "__typename",
+  "id"
+]);
 ```
 
 [version-image]: https://img.shields.io/npm/v/graphql-add-remove-fields.svg?style=flat
