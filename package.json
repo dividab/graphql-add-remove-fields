@@ -1,0 +1,15 @@
+{
+  "name": "graphql-add-remove-fields",
+  "version": "0.1.0",
+  "description": "Add or remove fields in graphql queries",
+  "main": "index.js",
+  "author": "Divid AB <info@divid.se>",
+  "license": "MIT",
+  "repository": "https://github.com/dividab/graphql-add-remove-fields",
+  "keywords": [
+    "graphql"
+  ],
+  "dependencies": {
+    "graphql": "^0.13.2"
+  }
+}
