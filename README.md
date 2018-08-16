@@ -38,6 +38,7 @@ const query = gql`
     }
   }
 `;
+
 // This will add the __typename and id fields to all selection sets in the query
 const queryWithAddedFields = addFields(query, ["__typename", "id"]);
 
