@@ -31,22 +31,31 @@ import gql from "graphql-tag";
 import { addFields, removeFields } from "graphql-add-remove-fields";
 
 const query = gql`
-  query olle {
-    root {
-      name
-      nisse
+  query MyQuery {
+    user(id: 10) {
+      firstName
+      lastName
     }
   }
 `;
 
-// This will add the __typename and id fields to all selection sets in the query
-const queryWithAddedFields = addFields(query, ["__typename", "id"]);
+// This will add the __typename field to all selection sets in the query
+const queryAdded = addFields(query, ["__typename"]);
+
+/*
+The query is now:
+  query MyQuery {
+    user(id: 10) {
+      firstName
+      lastName
+      __typename
+    }
+    __typename
+  }
+*/
 
 // This will remove the added fields so we will get back the original query
-const queryWithRemovedFields = removeFields(queryWithAddedFields, [
-  "__typename",
-  "id"
-]);
+const queryRemoved = removeFields(queryAdded, ["__typename"]);
 ```
 
 [version-image]: https://img.shields.io/npm/v/graphql-add-remove-fields.svg?style=flat
