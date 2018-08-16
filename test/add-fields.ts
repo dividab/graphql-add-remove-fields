@@ -7,6 +7,10 @@ test("Add required fields", t => {
   addFieldTestData.forEach(testCase => {
     t.test(testCase.name, st => {
       const actual = addFields(testCase.beforegql, testCase.fieldsToAdd);
+      //   console.log("WE WANT!!");
+      //   console.log(JSON.stringify(testCase.aftergql.definitions));
+      //   console.log("WE GOT!!");
+      //   console.log(JSON.stringify(actual.definitions));
       st.deepEqual(actual.definitions, testCase.aftergql.definitions);
       st.end();
     });
@@ -35,10 +39,11 @@ const addFieldTestData: ReadonlyArray<AddFieldsTest> = [
     aftergql: gql`
       query olle {
         root {
-          __typename
           name
           nisse
+          __typename
         }
+        __typename
       }
     `
   },
@@ -56,11 +61,13 @@ const addFieldTestData: ReadonlyArray<AddFieldsTest> = [
     aftergql: gql`
       query olle {
         root {
-          id
-          __typename
           name
           nisse
+          id
+          __typename
         }
+        id
+        __typename
       }
     `
   }
