@@ -1,0 +1,17 @@
+{
+  "extends": "../base-tsconfig.json",
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./lib",
+    "sourceMap": true,
+    "declaration": true,
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {},
+    "lib": ["es2015", "esnext.asynciterable"]
+  },
+  "include": ["**/*"]
+}

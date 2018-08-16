@@ -28,7 +28,7 @@ export function addFields(
 
         const fieldsToAdd: Array<GraphQL.FieldNode> = [];
         for (const fieldName of fieldNames) {
-          if (!hasField(fieldName)(node.selections)) {
+          if (!hasField(fieldName)(node.selections as any)) {
             const fieldToAdd = createField(fieldName);
             fieldsToAdd.push(fieldToAdd);
           }
@@ -43,7 +43,7 @@ export function addFields(
         return false;
       }
     }
-  });
+  } as any);
 }
 
 function hasField(
