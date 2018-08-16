@@ -1,9 +1,9 @@
 import * as test from "tape";
 import { addFields } from "../src";
-import { testData } from "./test-data";
+import { addFieldsTestData } from "./test-data";
 
 test("Add fields", t => {
-  testData.forEach(testCase => {
+  addFieldsTestData.forEach(testCase => {
     t.test(testCase.name, st => {
       const actual = addFields(testCase.withoutFields, testCase.fields);
       //   console.log("WE WANT!!");

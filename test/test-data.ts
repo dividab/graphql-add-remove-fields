@@ -8,38 +8,70 @@ export interface OneTest {
   readonly withFields: GraphQL.DocumentNode;
 }
 
-export const testData: ReadonlyArray<OneTest> = [
-  {
-    name: "__typename",
-    fields: ["__typename"],
-    withoutFields: gql`
-      query olle {
-        root {
-          name
-          nisse
-        }
+const typenameAddRemoveTest = {
+  name: "__typename",
+  fields: ["__typename"],
+  withoutFields: gql`
+    query olle {
+      root {
+        name
+        nisse
       }
-    `,
-    withFields: gql`
-      query olle {
-        root {
-          name
-          nisse
-          __typename
-        }
+    }
+  `,
+  withFields: gql`
+    query olle {
+      root {
+        name
+        nisse
         __typename
       }
-    `
-  },
+      __typename
+    }
+  `
+};
+
+const idTypenameAddRemoveTest = {
+  name: "id and __typename",
+  fields: ["id", "__typename"],
+  withoutFields: gql`
+    query olle {
+      root {
+        name
+        nisse
+      }
+    }
+  `,
+  withFields: gql`
+    query olle {
+      root {
+        name
+        nisse
+        id
+        __typename
+      }
+      id
+      __typename
+    }
+  `
+};
+
+export const addFieldsTestData: ReadonlyArray<OneTest> = [
+  typenameAddRemoveTest,
+  idTypenameAddRemoveTest,
   {
-    name: "id and __typename",
+    name: "already exists id and __typename should do nothing",
     fields: ["id", "__typename"],
     withoutFields: gql`
       query olle {
         root {
           name
           nisse
+          id
+          __typename
         }
+        id
+        __typename
       }
     `,
     withFields: gql`
@@ -55,4 +87,9 @@ export const testData: ReadonlyArray<OneTest> = [
       }
     `
   }
+];
+
+export const removeFieldsTestData: ReadonlyArray<OneTest> = [
+  typenameAddRemoveTest,
+  idTypenameAddRemoveTest
 ];
