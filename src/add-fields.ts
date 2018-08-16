@@ -28,7 +28,7 @@ export function addFields(
 
         const fieldsToAdd: Array<GraphQL.FieldNode> = [];
         for (const fieldName of fieldNames) {
-          if (!hasField(fieldName)(node.selections as any)) {
+          if (!hasField(fieldName)(node.selections)) {
             const fieldToAdd = createField(fieldName);
             fieldsToAdd.push(fieldToAdd);
           }
@@ -48,7 +48,7 @@ export function addFields(
 
 function hasField(
   name: string
-): (selectionSet: GraphQL.SelectionNode[]) => boolean {
+): (selectionSet: ReadonlyArray<GraphQL.SelectionNode>) => boolean {
   return selectionSet =>
     selectionSet
       .filter(s => s.kind === "Field")
