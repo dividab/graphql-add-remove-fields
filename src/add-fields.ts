@@ -64,6 +64,7 @@ function createField(name: string): GraphQL.FieldNode {
       value: name
     },
     // tslint:disable-next-line:no-arguments
+    // Add comment
     arguments: [],
     directives: [],
     selectionSet: undefined
