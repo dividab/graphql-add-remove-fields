@@ -1,6 +1,6 @@
 {
   "name": "graphql-add-remove-fields",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Add or remove fields in graphql queries",
   "main": "lib/index.js",
   "types": "lib/index",
@@ -17,6 +17,7 @@
     "@types/graphql": "^0.13.4",
     "@types/tape": "^4.2.32",
     "coveralls": "^3.0.2",
+    "graphql": "^0.13.0",
     "graphql-tag": "^2.9.2",
     "husky": "^0.14.3",
     "lint-staged": "^7.2.2",
@@ -27,8 +28,7 @@
     "tape": "^4.9.1",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
-    "typescript": "^3.0.1",
-    "graphql": "^0.13.0"
+    "typescript": "^3.0.1"
   },
   "scripts": {
     "lint": "tslint --config ./tslint.json -- './{src,test}/**/*.ts{,x}'",
