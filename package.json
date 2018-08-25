@@ -1,6 +1,6 @@
 {
   "name": "graphql-add-remove-fields",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Add or remove fields in graphql queries",
   "main": "lib/index.js",
   "types": "lib/index",
@@ -11,8 +11,8 @@
     "graphql"
   ],
   "peerDependencies": {
-    "graphql": "^0.13.0 || ^14.0.0",
-    "@types/graphql": "^0.13.0 || ^14.0.0"
+    "@types/graphql": "^0.13.0 || ^14.0.0",
+    "graphql": "^0.13.0 || ^14.0.0"
   },
   "devDependencies": {
     "@types/graphql": "^0.13.4",
