@@ -60,8 +60,8 @@ const queryRemoved = removeFields(queryAdded, ["__typename"]);
 
 [version-image]: https://img.shields.io/npm/v/graphql-add-remove-fields.svg?style=flat
 [version-url]: https://www.npmjs.com/package/graphql-add-remove-fields
-[travis-image]: https://travis-ci.org/dividab/graphql-add-remove-fields.svg?branch=master&style=flat
-[travis-url]: https://travis-ci.org/dividab/graphql-add-remove-fields
+[travis-image]: https://travis-ci.com/dividab/graphql-add-remove-fields.svg?branch=master&style=flat
+[travis-url]: https://travis-ci.com/dividab/graphql-add-remove-fields
 [coveralls-image]: https://coveralls.io/repos/github/dividab/graphql-add-remove-fields/badge.svg?branch=master
 [coveralls-url]: https://coveralls.io/github/dividab/graphql-add-remove-fields?branch=master
 [license-image]: https://img.shields.io/github/license/dividab/graphql-add-remove-fields.svg?style=flat
