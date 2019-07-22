@@ -1,6 +1,6 @@
 {
   "name": "graphql-add-remove-fields",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "Add or remove fields in graphql queries",
   "main": "lib/index.js",
   "types": "lib/index",
