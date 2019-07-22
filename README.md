@@ -12,7 +12,7 @@ Add or remove fields in graphql queries
 
 This package will recursively add or remove a specific field name in all selection sets within the query.
 
-One example usage is adding the `__typename` field to all selection sets in all outgoing queries and using this together with a normalized cahcing strategy such as [gql-cache](https://www.npmjs.com/package/gql-cache) to generate a unique ID for each normalized object.
+One example usage is adding the `__typename` field to all selection sets in all outgoing queries and using this together with a normalized cahcing strategy such as [graphql-norm](https://www.npmjs.com/package/graphql-norm) to generate a unique ID for each normalized object.
 
 ## How to install
 
