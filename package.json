@@ -36,10 +36,11 @@
     "test": "tape --require ts-node/register \"test/**/*.ts\" | tap-spec",
     "build": "rimraf lib && tsc -p src",
     "verify": "yarn lint && yarn build && yarn coverage",
-    "publish-npm": "yarn verify && yarn publish && git push --follow-tags",
     "precommit": "lint-staged",
     "coverage": "rimraf coverage .nyc_output && nyc yarn test",
-    "report-coverage": "codecov -f coverage/*.json"
+    "report-coverage": "codecov -f coverage/*.json",
+    "preversion": "yarn verify",
+    "postversion": "git push --tags && yarn publish --new-version $npm_package_version && git push --follow-tags && echo \"Successfully released version $npm_package_version!\""
   },
   "lint-staged": {
     "*.{ts,tsx}": "tslint",

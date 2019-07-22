@@ -58,6 +58,14 @@ The query is now:
 const queryRemoved = removeFields(queryAdded, ["__typename"]);
 ```
 
+## How to publish
+
+```
+yarn version --patch
+yarn version --minor
+yarn version --major
+```
+
 [version-image]: https://img.shields.io/npm/v/graphql-add-remove-fields.svg?style=flat
 [version-url]: https://www.npmjs.com/package/graphql-add-remove-fields
 [travis-image]: https://travis-ci.com/dividab/graphql-add-remove-fields.svg?branch=master&style=flat
