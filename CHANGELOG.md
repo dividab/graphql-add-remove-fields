@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased](https://github.com/dividab/tsconfig-paths/compare/1.1.0...master)
 
-## [1.1.0](https://github.com/dividab/tsconfig-paths/compare/1.0.0...1.1.0) - 2019-07-22
+## [1.1.0](https://github.com/dividab/tsconfig-paths/compare/1.0.0...1.1.0) - 2019-10-02
 
 ### Added
 
