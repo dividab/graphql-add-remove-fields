@@ -5,7 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased](https://github.com/dividab/tsconfig-paths/compare/1.1.0...master)
+## [Unreleased](https://github.com/dividab/tsconfig-paths/compare/1.2.0...master)
+
+## [1.2.0](https://github.com/dividab/tsconfig-paths/compare/1.1.0...1.2.0) - 2020-03-29
+
+### Added
+
+- Include typescript source from `src/` in published npm package.
 
 ## [1.1.0](https://github.com/dividab/tsconfig-paths/compare/1.0.0...1.1.0) - 2019-10-02
 

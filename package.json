@@ -4,11 +4,19 @@
   "description": "Add or remove fields in graphql queries",
   "main": "lib/index.js",
   "types": "lib/index",
-  "author": "Divid AB <info@divid.se>",
-  "license": "MIT",
   "repository": "https://github.com/dividab/graphql-add-remove-fields",
   "keywords": [
     "graphql"
+  ],
+  "author": "Divid AB <info@divid.se>",
+  "license": "MIT",
+  "files": [
+    "/lib",
+    "/src",
+    "package.json",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
   ],
   "peerDependencies": {
     "graphql": "^14.5.8"
